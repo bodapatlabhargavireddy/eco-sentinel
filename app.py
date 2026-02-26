@@ -29,7 +29,7 @@ if location:
 
     # 5. The 3D Map
     st.pydeck_chart(pdk.Deck(
-        map_style='mapbox://styles/mapbox/dark-v10',
+        map_style=None,
         initial_view_state=pdk.ViewState(latitude=lat, longitude=lon, zoom=13, pitch=45),
         layers=[pdk.Layer('ColumnLayer', data, get_position='[lon, lat]', get_elevation='h', 
                           elevation_scale=10, radius=200, get_fill_color=[255, 165, 0, 180])],
